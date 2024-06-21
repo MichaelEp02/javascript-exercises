@@ -1,14 +1,5 @@
 const leapYears = function(year) {
-    if(!(year % 4)){
-        if(!(year%100)){
-            if(!(year%400))
-                return true
-            return false
-        }
-        return true
-    }
-    return false
-};
-
+    return !(year%4) && (!(year % 400) || year%100 != 0)
+}
 // Do not edit below this line
 module.exports = leapYears;
